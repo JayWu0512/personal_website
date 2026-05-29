@@ -46,6 +46,7 @@ import llm from "./assets/techstack/llm.png";
 // Club Activity
 import north_taiwan_dance_competition from "./assets/north_taiwan_dance_competition.jpg"
 import volunteer from "./assets/volunteer.jpg"
+import cloud_club from "./assets/cloud_club.jpeg"
 
 // Logos
 export const logos = {
@@ -58,9 +59,10 @@ export const logos = {
 export const personalDetails = {
   name: "Sung-Tse Wu (Jay)",
   tagline: [
-      "Data Science @ Duke,",
-      "Accountancy @ NTPU,",
-      "CPA (Taiwan) - Licensed, Non-practicing "
+      "Data Science @ Duke",
+      "Accountancy @ NTPU",
+      "AWS Cloud Club Captain",
+      "Taiwan CPA",
   ],
   img: profile,
   about: `My name is Jay Wu, a curious, empathetic communicator who aspires to be <strong>"someone with a story to tell."</strong> During my time at PwC, I observed the diverse people I encountered over the past two years and found myself asking, <strong>Is accounting the only path in life for me?</strong> \nIn search of new directions, I began identifying talent gaps within each company I worked with and dedicated my spare time to learning various fields and exploring my interests. This journey has fostered a strong passion for the fields of data and AI, and I am committed to applying my coding skills and current knowledge to help companies tackle a variety of challenges. My goal is to leverage my expertise in accounting, finance, and data to enhance company efficiency while building a solid reputation.`,
@@ -76,11 +78,35 @@ export const socialMediaUrl = {
 // Enter your Work Experience here
 export const workDetails = [
   {
+    Position: "Data Science Intern",
+    Company: `NetApp`,
+    Location: "Research Triangle Park, NC",
+    Type: "Internship",
+    Duration: "May 2026 - Present",
+    Link: "https://www.netapp.com/",
+  },
+  {
+    Position: "Teaching Assistant",
+    Company: `MIDS, Master in Interdisciplinary Data Science`,
+    Location: "Durham, NC",
+    Type: "Part-time",
+    Duration: "Starting from Aug 2026",
+    Link: "https://datascience.duke.edu/",
+  },
+  {
+    Position: "Research Assistant",
+    Company: `Fuqua School of Business, Duke University`,
+    Location: "Durham, NC",
+    Type: "Part-time",
+    Duration: "Jan 2026 - May 2026",
+    Link: "https://www.fuqua.duke.edu/",
+  },
+  {
     Position: "Full-Stack Engineer",
     Company: `IHH Co., Ltd. (Video-tech startup for Taiwan banks & small business)`,
     Location: "Remote",
     Type: "Contract",
-    Duration: "Jun 2025 - Present",
+    Duration: "Jun 2025 - May 2026",
     Link: "https://www.ihh.tw/en",
   },
   {
@@ -126,10 +152,18 @@ export const eduDetails = [
     Duration: "Aug 2025 - May 2027 ",
     Link: "https://www.datascience.duke.edu/",
     EducationDetails : [
-      {
-        img:logo,
-        JobContent: "Still Updating!",
-      },
+  {
+    img: cloud_club,
+    Position: "AWS Cloud Club - Co-Captain",
+    Duration: "Sep 2025 - May 2026",
+    JobContent: `One of the most meaningful experiences during my first year at Duke was serving as a Co-Captain of the AWS Cloud Club. This experience allowed me to go beyond simply learning cloud computing as a student and gave me the opportunity to help build a community where students could explore cloud technologies together.
+
+  In this role, I helped organize multiple events, including cloud introduction sessions and hands-on workshops in collaboration with AWS engineers. These experiences taught me how to translate technical topics into accessible learning opportunities for students with different backgrounds. At the same time, I had the opportunity to connect with people from AWS, such as Jonathon, and learn from their professional experience and perspectives. I also worked closely with our Captain, Afag, as well as club members such as Isaac and Tursunai, which helped me better understand how teamwork, communication, and shared responsibility are essential when running a student organization.
+
+  Beyond organizing events, joining the AWS Cloud Club also supported my own technical development. Through the resources, community, and learning environment provided by the club, I was able to prepare for and pass the AWS Cloud Practitioner certification. This experience strengthened not only my cloud knowledge, but also my confidence in learning new technical topics independently.
+
+  In summary, serving as a Co-Captain of the AWS Cloud Club helped me grow as both a learner and a community contributor. It taught me how to organize educational events, collaborate with industry professionals, and support peers in their learning journeys. I believe these experiences will continue to help me in future technical teamwork, cross-functional collaboration, and leadership opportunities.`,
+  },
     ]
   },
   {
@@ -164,6 +198,14 @@ export const certificationDetails = [
     Credential_ID: "8842",
     Classification: "Accounting",
     Link: "https://www.linkedin.com/in/sung-tse-wu/details/certifications/1727959791084/single-media-viewer/?profileId=ACoAAEuCQnABL_m03p3c69EasK8xBiyNe_fdBkM",
+  },
+  {
+    Name: "AWS Certified Cloud Practitioner",
+    Issued_institution: `Amazon Web Services (AWS)`,
+    Issued_time: "May 2026",
+    Credential_ID: "-",
+    Classification: "Cloud",
+    Link: "https://www.credly.com/badges/212bb8e3-0718-40f1-8f09-96938dbfad60/linked_in_profile",
   },
   {
     Name: "Data Engineer Associate",
