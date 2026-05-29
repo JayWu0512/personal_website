@@ -75,7 +75,7 @@ function Header() {
             </NavLink>
           </li>
           <li>
-            <a href="https://drive.google.com/file/d/1SlXf5DFsKx2VjfJfDLPZOu_NuEaYeFGJ/view?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={toggleClass}>
+            <a href="https://drive.google.com/file/d/1LzD6s6hp2Efb7Gj4FtmFX3-V_pGD6NOL/view?usp=sharing" target="_blank" rel="noopener noreferrer" onClick={toggleClass}>
               Resume
             </a>
           </li>
