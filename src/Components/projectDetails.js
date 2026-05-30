@@ -7,6 +7,7 @@ import name_searching from ".././assets/projects/name_searching.png";
 import boogle from ".././assets/projects/boogle.png"
 import rotten_tomato from ".././assets/projects/rotten_tomato.png"
 import neural_network from ".././assets/projects/neural_network.png"
+import project6 from ".././assets/projects/project6.jpg";
 
 // finScope3D Project Image
 import finscope3d from ".././assets/projects/finscope3d/finscope3d.png"
@@ -61,6 +62,13 @@ import lstm_logo from ".././assets/projects/lstm/logo.png"
 import lstm_plot1 from ".././assets/projects/lstm/plot1.png"
 import lstm_plot2 from ".././assets/projects/lstm/plot2.png"
 import lstm_plot3 from ".././assets/projects/lstm/plot3.png"
+
+// EduFER Project Images
+import edufer_logo from ".././assets/projects/edufer/logo.png"
+import edufer_plot1 from ".././assets/projects/edufer/plot1.png"
+import edufer_plot2 from ".././assets/projects/edufer/plot2.png"
+import edufer_plot3 from ".././assets/projects/edufer/plot3.png"
+import edufer_plot4 from ".././assets/projects/edufer/plot4.png"
 
 // Enter your Project Details here
 export const projectDetails = [
@@ -370,6 +378,83 @@ export const projectDetails = [
       <p key="1">
         <strong>Tech</strong> <br />
         Python, PyTorch, LSTM, spaCy NER, Semantic Retrieval, OpenAI Evaluation, Character-Level Tokenization, Long-Context QA, Ablation Study
+      </p>,
+    ],
+  },
+  {
+    title: "EduFER: Facial Expression Recognition for Student Engagement",
+    image: edufer_logo,
+    description: [
+      <p key="1">
+        <strong>EduFER is a real-time student-engagement monitoring system that uses facial expression recognition to help instructors identify disengaged students as class is happening.</strong>
+        <br />
+        The project was designed for an EdTech product stakeholder who needed a practical classroom tool, not just a benchmark model. Our goal was to detect disengagement reliably enough to support timely instructional intervention while still keeping the system computationally efficient for real-world deployment.
+        <br />
+        <br />
+        We compared multiple pretrained image-classification models and focused especially on whether they could identify <strong>Not Engaged</strong> students, since those are the most actionable cases for instructors. Beyond accuracy, we also evaluated interpretability, class-imbalance handling, and fairness across student groups.
+        <br />
+        <br />
+        There are 4 main parts of the project:
+        <br />
+        <strong>Model Selection for Deployment:</strong> Fine-tuned ResNet, Vision Transformer, and VGG16 on a student-engagement dataset, then compared them on disengaged detection, engaged detection, overall performance, and training time.
+        <br />
+        <strong>Class-Imbalance Experiments:</strong> Tested weighted loss, oversampling, and their combination to improve recall on the underrepresented disengaged class, which represented the most important classroom intervention target.
+        <br />
+        <strong>Interpretability and Reliability Analysis:</strong> Used Grad-CAM to inspect where the model was attending and found that predictions were not always grounded in facial cues, motivating more face-focused preprocessing and future landmark-based approaches.
+        <br />
+        <strong>Fairness and Practical Validation:</strong> Evaluated reliability across demographic groups and explored face-cropping as a deployment-oriented preprocessing strategy, showing where the current system works and where additional robustness improvements are still needed.
+        <br />
+        <br />
+        The final recommendation was to use ResNet as the primary EduFER model because it provided the best balance between disengaged-student detection and training efficiency among the models tested. Additional experiments showed that weighted loss and oversampling both improved disengagement detection over the baseline, while interpretability and fairness checks revealed important areas for future improvement before broader deployment.
+      </p>,
+    ],
+    links: [],
+    imgs: [
+      edufer_plot1,
+      edufer_plot2,
+      edufer_plot3,
+      edufer_plot4
+    ],
+    appendix: [
+      <p key="1">
+        <strong>Tech</strong> <br />
+        Python, ResNet, Vision Transformer, VGG16, Grad-CAM, Class Imbalance Handling, Oversampling, Weighted Loss, Facial Expression Recognition, Real-Time Dashboard
+      </p>,
+    ],
+  },
+  {
+    title: "EduCasual",
+    image: project6,
+    description: [
+      <p key="1">
+        <strong>EduCasual is a causal analysis project studying how online student engagement affects academic performance using OULAD panel data.</strong>
+        <br />
+        The project was built for online learning platform teams, course designers, and instructors who need evidence on whether engagement-building features such as reminders, gamification, and structured nudges actually improve outcomes rather than simply increasing activity.
+        <br />
+        <br />
+        Using student-assessment panel data from the Open University Learning Analytics Dataset, we examined whether students score better during periods when they engage more than usual, and whether those gains differ across student backgrounds.
+        <br />
+        <br />
+        There are 4 main parts of the analysis:
+        <br />
+        <strong>Panel Data Construction:</strong> Merged assessment records, assessment metadata, VLE interaction logs, and student demographic data to build a student-assessment panel with 173,739 observations.
+        <br />
+        <strong>Engagement Measurement:</strong> Defined engagement as total platform clicks in the 30 days before each assessment, then log-transformed the measure to reduce skew and make comparisons more stable.
+        <br />
+        <strong>Causal Inference Design:</strong> Estimated two-way fixed-effects panel regressions with student and assessment fixed effects to isolate within-student changes in performance while controlling for time-invariant ability and assessment difficulty.
+        <br />
+        <strong>Heterogeneity Analysis:</strong> Tested whether the engagement-performance relationship differed by socioeconomic status and education background to identify which student groups may benefit most from engagement interventions.
+        <br />
+        <br />
+        The final results showed that students perform better when they are more engaged than usual, even after controlling for student- and assessment-level differences. The gains from engagement were strongest for students with lower education backgrounds, while socioeconomic background did not meaningfully change the effect, suggesting that engagement features are broadly useful but may deliver especially high value for academically less-prepared learners.
+      </p>,
+    ],
+    links: [],
+    imgs: [],
+    appendix: [
+      <p key="1">
+        <strong>Tech</strong> <br />
+        Python, Pandas, PanelOLS, Fixed Effects Regression, Causal Inference, OULAD, Educational Analytics, Panel Data
       </p>,
     ],
   },
