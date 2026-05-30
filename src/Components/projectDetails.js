@@ -28,6 +28,13 @@ import skillminer_architecture from ".././assets/projects/skillminer/skillminer-
 import skillminer_studyplan from ".././assets/projects/skillminer/studyplan.png"
 import skillminer_upload from ".././assets/projects/skillminer/upload.png"
 
+// CodenamesRL Project Images
+import codenames from ".././assets/projects/codenamerl/codenames.png"
+import codename_settings from ".././assets/projects/codenamerl/codename_settings.png"
+import codenames_eval_table from ".././assets/projects/codenamerl/codenames_eval_table.png"
+import codenames_rollout from ".././assets/projects/codenamerl/codenames_rollout.png"
+import codenames_summary_table from ".././assets/projects/codenamerl/codenames_summary_table.png"
+
 // Enter your Project Details here
 export const projectDetails = [
   {
@@ -87,7 +94,66 @@ export const projectDetails = [
       </p>,
     ],
   },
-
+  {
+    title: "CodenamesRL – Model-Free RL for Semantic Decision-Making",
+    image: codenames,
+    description: [
+      <p key="1">
+        <strong>CodenamesRL is a reinforcement learning research pipeline for the Codenames spymaster task.</strong>
+        <br />
+        It reformulates clue generation as a semantic decision-making problem, where an agent observes a hidden-role
+        Codenames board and outputs a one-word clue plus a clue count. Instead of generating open-ended language,
+        the agent acts in a continuous embedding space and decodes its action into a legal clue candidate.
+        <br />
+        <br />
+        The project combines semantic embeddings, imitation learning, off-policy reinforcement learning, and
+        goal-conditioned replay to study whether a learning-based spymaster can produce safer and more effective clues.
+        <br />
+        <br />
+        There are 6 key components:
+        <br />
+        <strong>Goal-Conditioned Environment:</strong> A custom Codenames environment that tracks board roles,
+        remaining words, target goals, and clue outcomes.
+        <br />
+        <strong>Semantic Representation:</strong> Board words and clue candidates are embedded using
+        Sentence-Transformers to model semantic similarity.
+        <br />
+        <strong>Greedy Baseline:</strong> A cosine-margin heuristic that selects clues close to friendly targets
+        and far from dangerous words.
+        <br />
+        <strong>Behavioral Cloning:</strong> A supervised warm-start stage that imitates greedy demonstrations
+        before reinforcement learning.
+        <br />
+        <strong>SAC + HER Training:</strong> A Soft Actor-Critic pipeline with Hindsight Experience Replay for
+        continuous clue-embedding actions and goal-conditioned learning.
+        <br />
+        <strong>Reward Shaping & Evaluation:</strong> Intermediate rewards penalize risky guesses and encourage
+        semantic separation, with evaluation across Greedy, BC-only, BC + SAC + HER, and BC + SAC + HER + Reward Shaping.
+        <br />
+        <br />
+        The final experiments show that the full RL pipeline is operational and improves stability compared with
+        BC-only in traced rollouts, but the greedy semantic baseline still remains the strongest method in the
+        current small-scale 5x5 benchmark.
+      </p>,
+    ],
+    links: [
+      "https://github.com/JayWu0512/CodenamesRL",
+      "https://github.com/JayWu0512/CodenamesRL/blob/main/reports/Codenames%20Final%20Report.pdf"
+    ],
+    imgs: [
+      codenames_summary_table,
+      codename_settings,
+      codenames_rollout,
+      codenames_eval_table,
+    ],
+    appendix: [
+      <p key="1">
+        <strong>Tech</strong> <br />
+        Python, Gymnasium, Stable-Baselines3, PyTorch, Sentence-Transformers, Soft Actor-Critic, 
+        Hindsight Experience Replay, Behavioral Cloning, Reward Shaping, Jupyter Notebook, Matplotlib
+      </p>,
+    ],
+  },
   {
     title: "FinScope3D - Multimodal Financial QA Platform",
     image: finscope3d,
