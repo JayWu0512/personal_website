@@ -7,7 +7,6 @@ import name_searching from ".././assets/projects/name_searching.png";
 import boogle from ".././assets/projects/boogle.png"
 import rotten_tomato from ".././assets/projects/rotten_tomato.png"
 import neural_network from ".././assets/projects/neural_network.png"
-import project6 from ".././assets/projects/project6.jpg";
 
 // finScope3D Project Image
 import finscope3d from ".././assets/projects/finscope3d/finscope3d.png"
@@ -69,6 +68,13 @@ import edufer_plot1 from ".././assets/projects/edufer/plot1.png"
 import edufer_plot2 from ".././assets/projects/edufer/plot2.png"
 import edufer_plot3 from ".././assets/projects/edufer/plot3.png"
 import edufer_plot4 from ".././assets/projects/edufer/plot4.png"
+
+// EduCasual Project Images
+import educasual_logo from ".././assets/projects/educasual/logo.png"
+import educasual_plot1 from ".././assets/projects/educasual/plot1.png"
+import educasual_plot2 from ".././assets/projects/educasual/plot2.png"
+import educasual_plot3 from ".././assets/projects/educasual/plot3.png"
+import educasual_plot4 from ".././assets/projects/educasual/plot4.png"
 
 // Enter your Project Details here
 export const projectDetails = [
@@ -424,7 +430,7 @@ export const projectDetails = [
   },
   {
     title: "EduCasual",
-    image: project6,
+    image: educasual_logo,
     description: [
       <p key="1">
         <strong>EduCasual is a causal analysis project studying how online student engagement affects academic performance using OULAD panel data.</strong>
@@ -450,7 +456,12 @@ export const projectDetails = [
       </p>,
     ],
     links: [],
-    imgs: [],
+    imgs: [
+      educasual_plot1,
+      educasual_plot2,
+      educasual_plot3,
+      educasual_plot4
+    ],
     appendix: [
       <p key="1">
         <strong>Tech</strong> <br />
