@@ -35,6 +35,13 @@ import codenames_eval_table from ".././assets/projects/codenamerl/codenames_eval
 import codenames_rollout from ".././assets/projects/codenamerl/codenames_rollout.png"
 import codenames_summary_table from ".././assets/projects/codenamerl/codenames_summary_table.png"
 
+// Lexi Project Images
+import lexi from ".././assets/projects/lexi/lexi.png"
+import lexi_focus_zone from ".././assets/projects/lexi/focus_zone.png"
+import lexi_math_play from ".././assets/projects/lexi/math_play.png"
+import lexi_resources from ".././assets/projects/lexi/resources.png"
+import lexi_viz_lab from ".././assets/projects/lexi/viz_lab.png"
+
 // Enter your Project Details here
 export const projectDetails = [
   {
@@ -151,6 +158,52 @@ export const projectDetails = [
         <strong>Tech</strong> <br />
         Python, Gymnasium, Stable-Baselines3, PyTorch, Sentence-Transformers, Soft Actor-Critic, 
         Hindsight Experience Replay, Behavioral Cloning, Reward Shaping, Jupyter Notebook, Matplotlib
+      </p>,
+    ],
+  },
+  {
+    title: "Lexi - The Neurodiverse Learning Coach",
+    image: lexi,
+    description: [
+      <p key="1">
+        <strong>Lexi is an accessibility-first AI learning platform built for neurodiverse students.</strong>
+        <br />
+        It is designed to reduce barriers for learners with Dyslexia, ADHD, Dyscalculia, and related learning differences by transforming dense educational content into formats that are easier to process visually, verbally, and step by step.
+        <br />
+        <br />
+        Instead of only summarizing content, Lexi restructures learning materials with multimodal AI so students can interact with information in a way that better matches their cognitive needs.
+        <br />
+        <br />
+        There are 4 key components:
+        <br />
+        <strong>Homework Transformer:</strong> Uses Gemini vision capabilities to scan worksheets or uploaded photos, remove clutter, and regenerate content into simplified language with clearer instructional steps.
+        <br />
+        <strong>Visual Math Playground:</strong> Lets students draw directly on a canvas, then uses multimodal reasoning to interpret symbols and return structured visual feedback in real time.
+        <br />
+        <strong>Visual Learning Lab:</strong> Converts dense paragraphs into mind maps, concept trees, and step-based visual flows so learners can see relationships instead of decoding long text blocks.
+        <br />
+        <strong>Accessibility-First Interaction:</strong> Includes OpenDyslexic font support, high-contrast mode, focus mode, and voice-based interaction to reduce reading, typing, and cognitive load.
+        <br />
+        <br />
+        Lexi was built as a practical demonstration of how multimodal AI can create more equitable educational experiences by adapting curriculum content to the learner, not forcing the learner to adapt to the interface.
+      </p>,
+    ],
+    links: [
+      "https://lexi-learning.vercel.app/",
+      "https://github.com/JayWu0512/Lexi",
+      "https://youtu.be/WBUIakMCIl0",
+      "https://ai.studio/apps/drive/1vEyn_bwhbdFoCUuyqOFPy5h6jzRdK8Pw?fullscreenApplet=true"
+    ],
+    imgs: [
+      lexi_focus_zone,
+      lexi_math_play,
+      lexi_resources,
+      lexi_viz_lab
+    ],
+    appendix: [
+      <p key="1">
+        <strong>Tech</strong> <br />
+        React, TypeScript, Vite, Tailwind CSS, Google AI Studio, Gemini 3 Pro, Web Speech API, Multimodal Reasoning
       </p>,
     ],
   },
