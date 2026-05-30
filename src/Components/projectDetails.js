@@ -48,6 +48,20 @@ import opioid_summary1 from ".././assets/projects/opioid/summary1.png"
 import opioid_summary2 from ".././assets/projects/opioid/summary2.png"
 import opioid_summary3 from ".././assets/projects/opioid/summary3.png"
 
+// Music Mental Health Project Images
+import music_logo from ".././assets/projects/music/logo.png"
+import music_plot1 from ".././assets/projects/music/plot1.png"
+import music_plot2 from ".././assets/projects/music/plot2.png"
+import music_plot3 from ".././assets/projects/music/plot3.png"
+import music_plot4 from ".././assets/projects/music/plot4.png"
+import music_plot5 from ".././assets/projects/music/plot5.png"
+
+// Memory-Augmented LSTM Project Images
+import lstm_logo from ".././assets/projects/lstm/logo.png"
+import lstm_plot1 from ".././assets/projects/lstm/plot1.png"
+import lstm_plot2 from ".././assets/projects/lstm/plot2.png"
+import lstm_plot3 from ".././assets/projects/lstm/plot3.png"
+
 // Enter your Project Details here
 export const projectDetails = [
   {
@@ -272,6 +286,90 @@ export const projectDetails = [
       <p key="1">
         <strong>Tech</strong> <br />
         Python, Pandas, Jupyter Notebook, Statsmodels, Matplotlib, Difference-in-Differences, Public Health Data Integration
+      </p>,
+    ],
+  },
+  {
+    title: "Music Mental Health Analysis",
+    image: music_logo,
+    description: [
+      <p key="1">
+        <strong>This project analyzes how music-listening behavior relates to self-reported mental-health symptoms using an R-based statistical workflow.</strong>
+        <br />
+        Using the Music &amp; Mental Health (MxMH) survey dataset from Kaggle, we studied whether daily listening time and streaming-platform choice were meaningfully associated with depression symptoms, and whether music behavior could help identify respondents with high depression scores.
+        <br />
+        <br />
+        The analysis was designed for a university counseling and wellness stakeholder who wanted to know whether music-listening habits could serve as low-burden screening signals for student mental-health outreach.
+        <br />
+        <br />
+        There are 4 main parts of the project:
+        <br />
+        <strong>Data Cleaning and Preparation:</strong> Cleaned survey responses, removed unreliable BPM data and invalid Yes/No entries, filtered out missing platform and mood-effect records, and created a binary high-depression outcome for downstream modeling.
+        <br />
+        <strong>Poisson Regression for Depression Scores:</strong> Modeled depression scores as a function of listening hours, primary streaming platform, and their interaction, while controlling for age, anxiety, insomnia, OCD, genre preferences, and music-use context variables.
+        <br />
+        <strong>Logistic Regression for High Depression Risk:</strong> Estimated whether additional listening time increased the odds of reporting high depression symptoms, then evaluated performance with confusion matrices, ROC curves, and AUC diagnostics.
+        <br />
+        <strong>Stakeholder-Focused Interpretation:</strong> Translated statistical findings into practical guidance for counseling services, emphasizing that music behavior may provide context but should not replace validated mental-health indicators.
+        <br />
+        <br />
+        The final results show that listening hours alone are not a reliable indicator of depression risk. Associations between listening time and depression vary by streaming platform, while anxiety and insomnia are much stronger and more consistent predictors of elevated depression symptoms.
+      </p>,
+    ],
+    links: [],
+    imgs: [
+      music_plot1,
+      music_plot2,
+      music_plot3,
+      music_plot4,
+      music_plot5
+    ],
+    appendix: [
+      <p key="1">
+        <strong>Tech</strong> <br />
+        R, Quarto, tidyverse, dplyr, ggplot2, car, broom, pROC, caret, ResourceSelection, Poisson Regression, Logistic Regression
+      </p>,
+    ],
+  },
+  {
+    title: "memory augmented lstm research",
+    image: lstm_logo,
+    description: [
+      <p key="1">
+        <strong>This project studies how external memory modules can improve long-context language modeling beyond a standard LSTM.</strong>
+        <br />
+        Traditional LSTM language models struggle to retain important information across long sequences because they rely on a fixed hidden state and are vulnerable to vanishing-gradient effects. This research project introduces a Memory-Augmented LSTM framework that explicitly stores and retrieves past context to improve long-range question-answering and next-token prediction.
+        <br />
+        <br />
+        The system combines a base LSTM encoder-decoder with short-term and long-term memory components, then evaluates how each added memory mechanism changes performance across progressively more capable model variants.
+        <br />
+        <br />
+        There are 4 core parts of the research:
+        <br />
+        <strong>Base LSTM Language Model:</strong> Built a baseline character-level LSTM encoder-decoder for token prediction, which served as the reference point for all memory ablation experiments.
+        <br />
+        <strong>Short-Term Memory Design:</strong> Added summarization and token-budget control so recent conversational history could be compressed into a compact context representation without overwhelming the input sequence.
+        <br />
+        <strong>Long-Term Memory Design:</strong> Extended the model with named-entity memory and semantic retrieval so older but relevant information could be recalled through structured features and embedding-based similarity search.
+        <br />
+        <strong>Ablation and Cross-Domain Evaluation:</strong> Compared five model variants on a synthetic SkillMiner QA benchmark and a real Dog-Cat QA dataset using STM/LTM accuracy, LLM-as-a-judge scores, difflib similarity, and training-loss trends.
+        <br />
+        <br />
+        The final results showed a clear memory-performance tradeoff: the full-memory model achieved the best short-term memory accuracy on the synthetic benchmark, while the NER-enhanced model achieved the strongest long-term memory accuracy and converged earlier. On the real dog-cat dataset, all variants reduced loss but struggled to generalize, highlighting the challenge of domain transfer for memory-augmented sequence models.
+      </p>,
+    ],
+    links: [
+      "https://github.com/JayWu0512/memory-augmented-lstm-research"
+    ],
+    imgs: [
+      lstm_plot1,
+      lstm_plot2,
+      lstm_plot3
+    ],
+    appendix: [
+      <p key="1">
+        <strong>Tech</strong> <br />
+        Python, PyTorch, LSTM, spaCy NER, Semantic Retrieval, OpenAI Evaluation, Character-Level Tokenization, Long-Context QA, Ablation Study
       </p>,
     ],
   },
