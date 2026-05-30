@@ -346,7 +346,7 @@ export const projectDetails = [
     ],
   },
   {
-    title: "memory augmented lstm research",
+    title: "Memory Augmented LSTM Research",
     image: lstm_logo,
     description: [
       <p key="1">
@@ -387,6 +387,45 @@ export const projectDetails = [
       </p>,
     ],
   },
+
+  {
+    title: "My Personal Website",
+    image: logo,
+    description: [
+      <p key="1">
+        This is my first project to establish a personal website, featuring
+        several pages: <br />
+        <br />
+        <strong>About:</strong> Introduces my work experience, education, and certifications.
+        <br />
+        <br />
+        <strong>Technologies:</strong> Highlights the frontend, backend, database, and tools I’ve used. <br />
+        <br />
+        <strong>Projects:</strong> Showcases all ongoing and completed projects.
+        <br />
+        <br />
+        <strong>Resume:</strong> Contains my CV. <br />
+        <br />
+      </p>,
+      "The website was initially based on a GitHub template by Paven MG (linked below)." +
+        " I customized and extended it, with significant changes to the 'About' and 'Projects' sections." +
+        " In the 'About' page, I reformatted the education section to highlight what sets me apart from other college students." +
+        " The 'Projects' page required more extensive modifications, including fade animations and expandable content." +
+        " Through this project, I gained valuable experience with tools such as npm and frameworks like React.js.",
+    ],
+    links: [
+      "https://github.com/pavanmg007/react-developer-portfolio-template",
+      "https://sung-tse-wu-jay.vercel.app/",
+      "https://github.com/JayWu0512/sung-tse-wu-jay.github.io",
+    ],
+    imgs: [website],
+    appendix: [
+      <p key="1">
+        <strong>Tech</strong> <br /> Javascript, HTML, CSS, npm, Node.js
+      </p>,
+    ],
+  },
+
   {
     title: "EduFER: Facial Expression Recognition for Student Engagement",
     image: edufer_logo,
@@ -466,44 +505,6 @@ export const projectDetails = [
       <p key="1">
         <strong>Tech</strong> <br />
         Python, Pandas, PanelOLS, Fixed Effects Regression, Causal Inference, OULAD, Educational Analytics, Panel Data
-      </p>,
-    ],
-  },
-
-  {
-    title: "My Personal Website",
-    image: logo,
-    description: [
-      <p key="1">
-        This is my first project to establish a personal website, featuring
-        several pages: <br />
-        <br />
-        <strong>About:</strong> Introduces my work experience, education, and certifications.
-        <br />
-        <br />
-        <strong>Technologies:</strong> Highlights the frontend, backend, database, and tools I’ve used. <br />
-        <br />
-        <strong>Projects:</strong> Showcases all ongoing and completed projects.
-        <br />
-        <br />
-        <strong>Resume:</strong> Contains my CV. <br />
-        <br />
-      </p>,
-      "The website was initially based on a GitHub template by Paven MG (linked below)." +
-        " I customized and extended it, with significant changes to the 'About' and 'Projects' sections." +
-        " In the 'About' page, I reformatted the education section to highlight what sets me apart from other college students." +
-        " The 'Projects' page required more extensive modifications, including fade animations and expandable content." +
-        " Through this project, I gained valuable experience with tools such as npm and frameworks like React.js.",
-    ],
-    links: [
-      "https://github.com/pavanmg007/react-developer-portfolio-template",
-      "https://sung-tse-wu-jay.vercel.app/",
-      "https://github.com/JayWu0512/sung-tse-wu-jay.github.io",
-    ],
-    imgs: [website],
-    appendix: [
-      <p key="1">
-        <strong>Tech</strong> <br /> Javascript, HTML, CSS, npm, Node.js
       </p>,
     ],
   },
