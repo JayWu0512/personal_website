@@ -42,6 +42,12 @@ import lexi_math_play from ".././assets/projects/lexi/math_play.png"
 import lexi_resources from ".././assets/projects/lexi/resources.png"
 import lexi_viz_lab from ".././assets/projects/lexi/viz_lab.png"
 
+// Opioid Policy Project Images
+import opioid from ".././assets/projects/opioid/opioid.png"
+import opioid_summary1 from ".././assets/projects/opioid/summary1.png"
+import opioid_summary2 from ".././assets/projects/opioid/summary2.png"
+import opioid_summary3 from ".././assets/projects/opioid/summary3.png"
+
 // Enter your Project Details here
 export const projectDetails = [
   {
@@ -226,6 +232,46 @@ export const projectDetails = [
     appendix: [
       <p key="1">
         <strong>Tech</strong> <br /> Python, SQL, LLM, HuggingFace, LangChain, ChromaDB, LightGBM, Gradio
+      </p>,
+    ],
+  },
+  {
+    title: "Causal Analysis of Opioid Control Policies",
+    image: opioid,
+    description: [
+      <p key="1">
+        <strong>This project evaluates the causal impact of opioid control policies in Florida and Washington using longitudinal public-health and supply data.</strong>
+        <br />
+        We studied two state-level interventions with different policy designs: Florida&apos;s 2010 pill-mill crackdown and Washington&apos;s 2012 opioid prescribing guidelines. The goal was to estimate whether these policies were associated with meaningful reductions in prescription opioid supply and overdose mortality.
+        <br />
+        <br />
+        To do this, we built a harmonized county-year panel by combining ARCOS shipment records, CDC mortality data, and Census/IPUMS population estimates, then standardized outcomes as morphine milligram equivalents shipped per 1,000 residents and overdose deaths per 100,000 residents.
+        <br />
+        <br />
+        There are 4 key parts of the analysis:
+        <br />
+        <strong>Data Engineering Pipeline:</strong> Cleaned and merged multi-source opioid shipment, mortality, and population datasets using county FIPS codes to construct an analysis-ready county-year panel.
+        <br />
+        <strong>Outcome Construction:</strong> Converted shipment data into per-capita MME measures and mortality data into overdose death rates so policy effects could be compared across states and years.
+        <br />
+        <strong>Pre-Post and Difference-in-Differences Analysis:</strong> Combined trend visualization with DiD estimation to compare treated states against geographically and behaviorally similar control states.
+        <br />
+        <strong>Sensitivity and Data Quality Checks:</strong> Tested multiple missing-data strategies and population cutoffs to handle suppression and improve the stability of mortality estimates.
+        <br />
+        <br />
+        The final results show a sharp and sustained post-2010 decline in opioid shipments in Florida, along with a relative decline in mortality versus nearby controls. Washington showed smaller and less persistent changes, suggesting that guideline-based interventions alone may have weaker effects than enforcement-heavy policy actions in this setting.
+      </p>,
+    ],
+    links: [],
+    imgs: [
+      opioid_summary1,
+      opioid_summary2,
+      opioid_summary3
+    ],
+    appendix: [
+      <p key="1">
+        <strong>Tech</strong> <br />
+        Python, Pandas, Jupyter Notebook, Statsmodels, Matplotlib, Difference-in-Differences, Public Health Data Integration
       </p>,
     ],
   },
